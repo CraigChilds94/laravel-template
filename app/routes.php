@@ -15,5 +15,5 @@
 //  This is the default view for the welcome screen
 Route::get('/', [
 	'as' 	=> 'home-welcome',
-	'use' 	=> 'HomeController@showWelcome'
+	'uses' 	=> 'HomeController@showWelcome'
 ]);
