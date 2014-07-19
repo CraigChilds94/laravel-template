@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+
+//  This is the default view for the welcome screen
+Route::get('/', [
+	'as' 	=> 'home-welcome',
+	'use' 	=> 'HomeController@showWelcome'
+]);

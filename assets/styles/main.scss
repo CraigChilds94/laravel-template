@@ -13,3 +13,34 @@
 
 // Include JEET Grid system
 @import 'jeet/index';
+@import url(fonts.googleapis.com/css?family=Lato:700);
+
+body {
+    padding: 0;
+    margin:0;
+    font-family:'Lato', sans-serif;
+    text-align:center;
+    color: #999;
+}
+
+.welcome {
+    @include align(both);
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    margin-top: -150px;
+
+    img {
+        width: 300px;
+        position: relative;
+    }
+}
+
+a, a:visited {
+    text-decoration:none;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 16px 0 0 0;
+}
