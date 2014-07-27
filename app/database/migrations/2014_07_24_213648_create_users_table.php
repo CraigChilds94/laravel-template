@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration {
 			$t->string('username');
 			$t->string('password');
 			$t->string('email');
+			$t->enum('acl', array('admin', 'user', 'contributer'))->default('user');
 			$t->softDeletes();
 			$t->timestamps();
 			$t->rememberToken();

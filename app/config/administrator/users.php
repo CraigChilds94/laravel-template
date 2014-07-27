@@ -25,6 +25,15 @@ return [
         ],
         'email' => [
             'title' => 'Email'
+        ],
+        'acl' => [
+            'title' => 'Access Control'
+        ],
+        'created_at' => [
+            'title' => 'Created At'
+        ],
+        'updated_at' => [
+            'title' => 'Updated At'
         ]
     ],
 
@@ -41,6 +50,15 @@ return [
         'email' => [
             'title' => 'Email',
             'type' => 'text'
+        ],
+        'acl' => [
+            'title' => 'Access Control',
+            'type' => 'enum',
+            'options' => [
+                'admin',
+                'user',
+                'contributer'
+            ]
         ]
     ],
 
@@ -52,6 +70,12 @@ return [
     ],
 
     // Set the width of the form
-    'form_width' => 550
+    'form_width' => 550,
+
+    // Set the permissions for this section
+    'permission' => function()
+    {
+        return Auth::user()->isAdmin();
+    }
 
 ];
