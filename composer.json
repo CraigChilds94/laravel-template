@@ -1,10 +1,11 @@
 {
-	"name": "CraigChilds94/laravel-template",
+	"name": "craigchilds94/laravel-template",
 	"description": "A template for the Laravel Framework.",
 	"keywords": ["framework", "laravel", "template"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "4.2.*",
+		"frozennode/administrator": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
