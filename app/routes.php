@@ -14,6 +14,30 @@
 
 //  This is the default view for the welcome screen
 Route::get('/', [
-	'as' 	=> 'home-welcome',
+	'as' 	=> 'home',
 	'uses' 	=> 'HomeController@showWelcome'
 ]);
+
+
+// This is the route for the login
+Route::get('/login', [
+	'as' 	=> 'login',
+	'uses' 	=> 'UserController@getLogin'
+]);
+
+// This is the route for the logout
+Route::get('/logout', [
+	'as' 	=> 'logout',
+	'uses'	=> 'UserController@getLogout'
+]);
+
+// Group all custom routes that need csrf together
+Route::group(array('before' => 'csrf'), function()
+{
+
+	// Define a post route for the login
+	Route::post('/login', [
+		'as' 	=> 'login-post',
+		'uses'	=> 'UserController@postLogin'
+	]);
+});

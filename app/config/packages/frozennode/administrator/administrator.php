@@ -61,7 +61,7 @@ return array(
 	 */
 	'permission'=> function()
 	{
-		return true; //Auth::check();
+		return Auth::check();
 	},
 
 	/**
@@ -98,14 +98,14 @@ return array(
 	 *
 	 * @type string
 	 */
-	'login_path' => 'user/login',
+	'login_path' => '/login',
 
 	/**
 	 * The logout path is the path where Administrator will send the user when they click the logout link
 	 *
 	 * @type string
 	 */
-	'logout_path' => false,
+	'logout_path' => '/logout',
 
 	/**
 	 * This is the key of the return path that is sent with the redirection to your login_action. Session::get('redirect') will hold the return URL.
