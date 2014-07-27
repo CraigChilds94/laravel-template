@@ -70,21 +70,21 @@ return array(
 	 *
 	 * @type bool
 	 */
-	'use_dashboard' => false,
+	'use_dashboard' => true,
 
 	/**
 	 * If you want to create a dashboard view, provide the view string here.
 	 *
 	 * @type string
 	 */
-	'dashboard_view' => '',
+	'dashboard_view' => 'admin.dashboard',
 
 	/**
 	 * The menu item that should be used as the default landing page of the administrative section
 	 *
 	 * @type string
 	 */
-	'home_page' => 'users',
+	'home_page' => 'dashboard',
 
 	/**
 	 * The route to which the user will be taken when they click the "back to site" button

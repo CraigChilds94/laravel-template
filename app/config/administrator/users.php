@@ -17,8 +17,14 @@ return [
 
     // Columns to display
     'columns' => [
+        'id' => [
+            'title' => 'ID'
+        ],
         'username' => [
             'title' => 'Username'
+        ],
+        'email' => [
+            'title' => 'Email'
         ]
     ],
 
@@ -26,8 +32,26 @@ return [
     'edit_fields' => [
         'username' => [
             'title' => 'Username',
-            'type' => 'string'
+            'type' => 'text'
+        ],
+        'password' => [
+            'title' => 'Password',
+            'type' => 'password'
+        ],
+        'email' => [
+            'title' => 'Email',
+            'type' => 'text'
         ]
-    ]
+    ],
+
+    // Filters
+    'filters' => [
+        'username' => [
+            'title' => 'Username'
+        ]
+    ],
+
+    // Set the width of the form
+    'form_width' => 550
 
 ];
